@@ -4,16 +4,22 @@
   "description": "Describe maxime-parriaux.com here",
   "private": true,
   "scripts": {
-    "build": "nwb build-react-app",
+    "build": "node_modules/.bin/node-sass --output-style compressed src/styles/main.scss > src/styles/main.css && nwb build-react-app",
     "clean": "nwb clean-app",
-    "start": "nwb serve-react-app",
+    "start": "node_modules/.bin/node-sass --output-style compressed src/styles/main.scss > src/styles/main.css && nwb serve-react-app",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
+    "node-sass": "^4.5.3",
+    "nwb-sass": "^0.8.1",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-social-icons": "^2.7.0",
+    "sass-loader": "^6.0.6"
   },
   "devDependencies": {
     "nwb": "0.18.x"
