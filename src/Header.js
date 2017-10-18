@@ -15,11 +15,11 @@ class Header extends Component {
         return (
             <div className="App-heading App-container">
                 <div className="Title App-flex">
-                    <p>Maxime Parriaux</p>
+                    <h3>Maxime Parriaux</h3>
                 </div>
-                <div className="Flex-row Links">
-                    <SocialIcon className="icon" url="https://twitter.com/MaximeParriaux/"/>
-                    <SocialIcon className="icon" url="https://github.com/ParriauxMaxime/"/>
+                <div className="Flex-row Social">
+                    <SocialIcon url="https://twitter.com/MaximeParriaux/"/>
+                    <SocialIcon url="https://github.com/ParriauxMaxime/"/>
                 </div>
                 <div className="Flex-row Links">
                     <Link to="/home" activeClassName={'selected'}>Home</Link>

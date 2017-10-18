@@ -7,6 +7,7 @@
  ***************************************/
 
 import React from 'react'
+import { Main } from './App'
 
 class Contact extends React.Component {
     render() {
