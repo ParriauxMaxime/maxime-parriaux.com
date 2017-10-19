@@ -2,23 +2,36 @@ import './styles/main.css'
 
 import React, {Component} from 'react'
 import Header from './Header'
-import {BrowserRouter, Redirect, Route} from 'react-router-dom'
+import {BrowserRouter, HashRouter, Redirect, Route} from 'react-router-dom'
 import Home from './Home'
 import Projects from './Projects'
 import Contact from './Contact'
 
 class App extends Component {
+    constructor(props) {
+        super(props)
+        this.main = null
+        this.state = {
+
+        }
+    }
+
+    onChangeRoute(oldLocation, newLocation) {
+    }
+
     render() {
         return (
 
             <BrowserRouter basename={'/'}>
                 <div className="App">
                     <div className="background"/>
-                    <Header/>
-                    <Route exact path="/" render={_ => <Redirect to="/home"/>}/>
-                    <Route exact path="/home" component={Home}/>
-                    <Route exact path="/projects" component={Projects}/>
-                    <Route exact path="/contact" component={Contact}/>
+                    <Header onChangeRoute={this.onChangeRoute.bind(this)}/>
+                    <Main ref={ _ => { this.main = _ }}>
+                        <Route exact path="/home" component={Home} />
+                        <Route exact path="/projects" component={Projects} />
+                        <Route exact path="/contact" component={Contact} />
+                        <Route path="*" render={_ => <Redirect to="/home"/>}/>
+                    </Main>
                 </div>
             </BrowserRouter>
         )
@@ -34,17 +47,10 @@ export class Main extends Component {
     }
 
     componentDidMount() {
-        this.setState({direction: 'inside'})
-    }
-
-    componentWillUnmount() {
-        this.setState({direction: 'outside'})
     }
 
     render() {
-        return (<div className="main" style={{
-            animation: '1.2s ease-out main-animation-' + this.state.direction
-        }}>{props.children}</div>)
+        return (<div className="main">{this.props.children}</div>)
     }
 }
 

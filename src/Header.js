@@ -10,7 +10,26 @@ import React, {Component} from 'react'
 import {SocialIcon} from 'react-social-icons'
 import {NavLink as Link} from 'react-router-dom'
 
+const CustomLink = (props) => {
+    const oldLocation = window.location.pathname,
+        newLocation = props.to,
+        onChangeRoute = props.onChangeRoute;
+    return (
+        <Link to={newLocation}
+              onClick={() => onChangeRoute(oldLocation, newLocation)}
+              activeClassName={'selected'}
+        >
+            {newLocation[1].toUpperCase() + newLocation.slice(2)}
+        </Link>
+    )
+}
+
 class Header extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+
     render() {
         return (
             <div className="App-heading App-container">
@@ -22,9 +41,9 @@ class Header extends Component {
                     <SocialIcon url="https://github.com/ParriauxMaxime/"/>
                 </div>
                 <div className="Flex-row Links">
-                    <Link to="/home" activeClassName={'selected'}>Home</Link>
-                    <Link to="/projects" activeClassName={'selected'}>Projects</Link>
-                    <Link to="/contact" activeClassName={'selected'}>Contact</Link>
+                    <CustomLink onChangeRoute={this.props.onChangeRoute} to="/home"/>
+                    <CustomLink onChangeRoute={this.props.onChangeRoute} to="/projects"/>
+                    <CustomLink onChangeRoute={this.props.onChangeRoute} to="/contact"/>
                 </div>
             </div>
         )

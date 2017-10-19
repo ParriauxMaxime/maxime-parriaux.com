@@ -7,12 +7,11 @@
  ***************************************/
 
 import React from 'react'
-import { Main } from './App'
 
 class Contact extends React.Component {
     render() {
         return (
-            <div className="main">Contact</div>
+            <div className="cube">Contact</div>
         )
     }
 }

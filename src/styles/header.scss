@@ -24,7 +24,9 @@ $text-color: #e8e8e8;
 @media (max-height: 840px){
   .Title {
     margin-top: 7vh;
-    font-size: 2rem;
+    h3 {
+      font-size: 2rem;
+    }
   }
   .Social {
     a {
@@ -35,7 +37,7 @@ $text-color: #e8e8e8;
     }
   }
   .App-heading {
-    height: 20%;
+    height: 18%;
     .Links {
       width: 100%;
     }
@@ -60,7 +62,7 @@ $text-color: #e8e8e8;
     }
   }
   .App-heading {
-    height: 18%;
+    height: 15%;
   }
 }
 
