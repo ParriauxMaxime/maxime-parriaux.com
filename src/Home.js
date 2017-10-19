@@ -72,7 +72,7 @@ class Home extends React.Component {
                     <h3>Prizes</h3>
                     <ul>
                         <li>
-                            Nov. 2016 - Won Startup Weekend Strasbourg with Ethikey
+                            Oct. 2016 - Won 2 prizes at the Hacking Industry Camp event with LogStradamus, Strasbourg
                         </li>
                     </ul>
                     <h3>

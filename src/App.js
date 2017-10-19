@@ -30,7 +30,7 @@ class App extends Component {
                         <Route exact path="/home" component={Home} />
                         <Route exact path="/projects" component={Projects} />
                         <Route exact path="/contact" component={Contact} />
-                        <Route path="*" render={_ => <Redirect to="/home"/>}/>
+                        <Route path="/*" render={_ => <Redirect to="/home"/>}/>
                     </Main>
                 </div>
             </BrowserRouter>
