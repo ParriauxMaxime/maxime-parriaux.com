@@ -2,3 +2,11 @@
 /dist
 /node_modules
 npm-debug.log*
+.idea/
+.travis.yml
+package-lock.json
+src/styles/*.css
+src/styles/*.css.map
+yarn.lock
+tests/
+CONTRIBUTING.md

@@ -11,7 +11,10 @@ import React from 'react'
 class Contact extends React.Component {
     render() {
         return (
-            <div className="cube">Contact</div>
+            <div className="content contact">
+                <h1>Contact</h1>
+
+            </div>
         )
     }
 }

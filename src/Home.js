@@ -26,12 +26,16 @@ class Home extends React.Component {
                         I am currently following a computer science cursus at EPITECH and
                         i'm trying to specialize in Web development.
                         <br/>
+                        <br/>
                         Interested in personal development, I enjoy the Open-Source mindset
                         and try to make the best of it.
                         <br/>
-                        My tool of choice are Javascript and React eco-system, I'm interested by
-                        FullStack development, and so I try to keep it up with lot of
-                        framework.<br/>
+                        <br/>
+                        My tools of choice are Javascript and React eco-system, I'm interested by
+                        FullStack development, and so I try to keep in touch with lot of
+                        frameworks.
+                        <br/>
+                        <br/>
                         Besides CS stuff, I like to discuss about science, psychology, play music
                         (guitar, piano, ...), drink coffee and challenge myself.
                     </p>

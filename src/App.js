@@ -6,6 +6,7 @@ import {BrowserRouter, HashRouter, Redirect, Route} from 'react-router-dom'
 import Home from './Home'
 import Projects from './Projects'
 import Contact from './Contact'
+import Footer from './Footer'
 
 class App extends Component {
     constructor(props) {
@@ -27,11 +28,12 @@ class App extends Component {
                     <div className="background"/>
                     <Header onChangeRoute={this.onChangeRoute.bind(this)}/>
                     <Main ref={ _ => { this.main = _ }}>
-                        <Route exact path="/home" component={Home} />
+                        <Route exact path="/" component={Home} />
                         <Route exact path="/projects" component={Projects} />
                         <Route exact path="/contact" component={Contact} />
-                        <Route path="/*" render={_ => <Redirect to="/home"/>}/>
+                        <Route path="/*" render={_ => <Redirect to="/"/>}/>
                     </Main>
+                    <Footer/>
                 </div>
             </BrowserRouter>
         )

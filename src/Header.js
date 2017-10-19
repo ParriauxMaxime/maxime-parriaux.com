@@ -13,13 +13,14 @@ import {NavLink as Link} from 'react-router-dom'
 const CustomLink = (props) => {
     const oldLocation = window.location.pathname,
         newLocation = props.to,
-        onChangeRoute = props.onChangeRoute;
+        onChangeRoute = props.onChangeRoute,
+        name = newLocation!== '/' ?  newLocation : '/home'
     return (
         <Link to={newLocation}
               onClick={() => onChangeRoute(oldLocation, newLocation)}
               activeClassName={'selected'}
         >
-            {newLocation[1].toUpperCase() + newLocation.slice(2)}
+            {name[1].toUpperCase() + name.slice(2)}
         </Link>
     )
 }
@@ -41,7 +42,7 @@ class Header extends Component {
                     <SocialIcon url="https://github.com/ParriauxMaxime/"/>
                 </div>
                 <div className="Flex-row Links">
-                    <CustomLink onChangeRoute={this.props.onChangeRoute} to="/home"/>
+                    <CustomLink onChangeRoute={this.props.onChangeRoute} to="/"/>
                     <CustomLink onChangeRoute={this.props.onChangeRoute} to="/projects"/>
                     <CustomLink onChangeRoute={this.props.onChangeRoute} to="/contact"/>
                 </div>
